@@ -2,6 +2,7 @@
 `timescale 1ns/1ps
 
 module conway_cell(clk, rst, ena, state_0, state_d, state_q, neighbors);
+<<<<<<< HEAD
     input wire clk;
     input wire rst;
     input wire ena;
@@ -42,3 +43,17 @@ module conway_cell(clk, rst, ena, state_0, state_d, state_q, neighbors);
     end
 
 endmodule
+=======
+input wire clk;
+input wire rst;
+input wire ena;
+
+input wire state_0;
+output logic state_d; // NOTE - this is only an output of the module for debugging purposes. 
+output logic state_q;
+
+input wire [7:0] neighbors;
+
+
+endmodule
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730

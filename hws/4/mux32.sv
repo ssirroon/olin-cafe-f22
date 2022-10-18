@@ -7,6 +7,7 @@
   The solutions will include comments for where I use python-generated HDL.
 */
 
+<<<<<<< HEAD
 module mux2(in0, in1, select, out);
   input wire in0, in1, select;
   output logic out;
@@ -114,6 +115,8 @@ module mux16(in0, in1, in2, in3, in4, in5, in6, in7, in8, in9, in10, in11, in12,
   );
 endmodule
 
+=======
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
 module mux32(
   in00, in01, in02, in03, in04, in05, in06, in07, in08, in09, in10, 
   in11, in12, in13, in14, in15, in16, in17, in18, in19, in20, in21, 
@@ -128,6 +131,7 @@ module mux32(
     in09, in10, in11, in12, in13, in14, in15, in16, in17, in18, in19, in20, 
     in21, in22, in23, in24, in25, in26, in27, in28, in29, in30, in31;
 	input  wire [4:0] select;
+<<<<<<< HEAD
   wire [1:0] internal;
 	output logic [(N-1):0] out;
 
@@ -180,4 +184,8 @@ mux16 mux1(
     .out (out)
   );
 
+=======
+	output logic [(N-1):0] out;
+
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
 endmodule

@@ -10,7 +10,11 @@ parameter COLS=N;
 // I/O declarations
 input wire ena;
 input wire [$clog2(N):0] x;
+<<<<<<< HEAD
 input wire [N*N-1:0] cells; // array must be square
+=======
+input wire [N*N-1:0] cells;
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
 output logic [N-1:0] rows;
 output logic [N-1:0] cols;
 
@@ -31,6 +35,7 @@ end
 wire [N-1:0] x_decoded;
 decoder_3_to_8 COL_DECODER(ena, x, x_decoded);
 
+<<<<<<< HEAD
 generate
   genvar i;
   for (i = 0; i < N; i++) begin
@@ -40,4 +45,6 @@ endgenerate
 
 always_comb cols = x_decoded;
 
+=======
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
 endmodule

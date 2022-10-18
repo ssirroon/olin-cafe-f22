@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
 module decoder_3_to_8(ena, in, out);
 
+<<<<<<< HEAD
     input wire ena;
     input wire [2:0] in;
     output logic [7:0] out;
@@ -24,4 +25,11 @@ module decoder_3_to_8(ena, in, out);
         .in (in[1:0]),
         .out (out[7:4])
     );
+=======
+  input wire ena;
+  input wire [2:0] in;
+  output logic [7:0] out;
+
+
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
 endmodule

@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+<<<<<<< HEAD
 // module for d flip flop with reset
 module flipflop(d, q, clk, rst);
     output logic q;
@@ -44,4 +45,8 @@ flipflop flipflop_2(
 always_comb ff_input[0] = ff_output[0] ^ ff_output[1];
 always_comb ff_input[1] = ena ? seed : ff_input[0];
 
+=======
+module practice(rst, clk, ena, seed, out);
+
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
 endmodule

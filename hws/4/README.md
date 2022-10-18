@@ -1,6 +1,7 @@
 # Homework 4
 The written portion is available [here](https://docs.google.com/document/d/1XybXmTD5-NTJ1gfLq3tYb-wUUDJGZS8xgO912DLf50Q/edit?usp=sharing)
 
+<<<<<<< HEAD
 Add a pdf of your written answers to this folder, then use `make clean` then `make submission` to submit!
 
 A description of how you implemented the modules (you can include pictures or reference notes in your homework pdf)
@@ -36,3 +37,6 @@ To run the tests, I first added the proper calls the the Makefile including defi
 For example:
 
 `make test_mux` would run the tests written for the MUX.
+=======
+Add a pdf of your written answers to this folder, then use `make clean` then `make submission` to submit!
+>>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
