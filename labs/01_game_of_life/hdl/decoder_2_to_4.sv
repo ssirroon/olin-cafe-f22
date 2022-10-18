@@ -1,5 +1,4 @@
 `timescale 1ns/1ps
-<<<<<<< HEAD
 
 module decoder_2_to_4(ena, in, out);
 
@@ -25,13 +24,4 @@ module decoder_2_to_4(ena, in, out);
         .in (in[0]),
         .out (out[3:2])
     );
-=======
-module decoder_2_to_4(ena, in, out);
-
-input wire ena;
-input wire [1:0] in;
-output logic [3:0] out;
-
-
->>>>>>> 946925bdd048cb5eac3e173bf627fac5f4d5c730
 endmodule
