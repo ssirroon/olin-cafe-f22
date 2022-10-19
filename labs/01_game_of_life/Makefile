@@ -64,4 +64,4 @@ clean:
 
 # Call this to generate your submission zip file.
 submission:
-	zip submission.zip Makefile *.sv README.md docs/* *.tcl *.xdc *.fst
+	zip submission.zip Makefile *.sv README.md docs/* *.tcl *.xdc *.fst hdl/*

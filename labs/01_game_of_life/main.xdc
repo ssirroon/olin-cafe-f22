@@ -17,10 +17,10 @@ set_property -dict { PACKAGE_PIN A18   IOSTANDARD LVCMOS33 } [get_ports { button
 set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33 } [get_ports { buttons[1] }]; #IO_L19P_T3_16 Sch=btn[1]
 
 # Map cols[N-1:0] and rows[N-1:0] to the correct pins using the reference values below.
-set_property -dict { PACKAGE_PIN M3    IOSTANDARD LVCMOS33 } [get_ports { cols[0] }]; #IO_L8N_T1_AD14N_35 Sch=pio[01], columns 0-3 are the 4 led array pins connected to long resistors
-set_property -dict { PACKAGE_PIN L3    IOSTANDARD LVCMOS33 } [get_ports { cols[1] }]; #IO_L8P_T1_AD14P_35 Sch=pio[02]
-set_property -dict { PACKAGE_PIN A16   IOSTANDARD LVCMOS33 } [get_ports { cols[2] }]; #IO_L12P_T1_MRCC_16 Sch=pio[03]
-set_property -dict { PACKAGE_PIN K3    IOSTANDARD LVCMOS33 } [get_ports { cols[3] }]; #IO_L7N_T1_AD6N_35 Sch=pio[04]
+set_property -dict { PACKAGE_PIN M3    IOSTANDARD LVCMOS33 } [get_ports { cols[3] }]; #IO_L8N_T1_AD14N_35 Sch=pio[01], columns 0-3 are the 4 led array pins connected to long resistors
+set_property -dict { PACKAGE_PIN L3    IOSTANDARD LVCMOS33 } [get_ports { cols[2] }]; #IO_L8P_T1_AD14P_35 Sch=pio[02]
+set_property -dict { PACKAGE_PIN A16   IOSTANDARD LVCMOS33 } [get_ports { cols[1] }]; #IO_L12P_T1_MRCC_16 Sch=pio[03]
+set_property -dict { PACKAGE_PIN K3    IOSTANDARD LVCMOS33 } [get_ports { cols[0] }]; #IO_L7N_T1_AD6N_35 Sch=pio[04]
 
 set_property -dict { PACKAGE_PIN U7    IOSTANDARD LVCMOS33 } [get_ports { rows[4] }]; #IO_L19P_T3_34 Sch=pio[45]
 set_property -dict { PACKAGE_PIN W7    IOSTANDARD LVCMOS33 } [get_ports { rows[5] }]; #IO_L13P_T2_MRCC_34 Sch=pio[46]
@@ -32,10 +32,10 @@ set_property -dict { PACKAGE_PIN U2    IOSTANDARD LVCMOS33 } [get_ports { cols[5
 set_property -dict { PACKAGE_PIN W6    IOSTANDARD LVCMOS33 } [get_ports { cols[6] }]; #IO_L13N_T2_MRCC_34 Sch=pio[43]
 set_property -dict { PACKAGE_PIN U3    IOSTANDARD LVCMOS33 } [get_ports { cols[7] }]; #IO_L9P_T1_DQS_34 Sch=pio[44]
 
-set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { rows[0] }]; #IO_L11P_T1_SRCC_16 Sch=pio[05], rows 4-7 are 4 led array pins right above long Rs
-set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { rows[1] }]; #IO_L3P_T0_DQS_AD5P_35 Sch=pio[06]
-set_property -dict { PACKAGE_PIN A15   IOSTANDARD LVCMOS33 } [get_ports { rows[2] }]; #IO_L6N_T0_VREF_16 Sch=pio[07]
-set_property -dict { PACKAGE_PIN B15   IOSTANDARD LVCMOS33 } [get_ports { rows[3] }]; #IO_L11N_T1_SRCC_16 Sch=pio[08]
+set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { rows[3] }]; #IO_L11P_T1_SRCC_16 Sch=pio[05], rows 0-3 are 4 led array pins right above long Rs
+set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { rows[2] }]; #IO_L3P_T0_DQS_AD5P_35 Sch=pio[06]
+set_property -dict { PACKAGE_PIN A15   IOSTANDARD LVCMOS33 } [get_ports { rows[1] }]; #IO_L6N_T0_VREF_16 Sch=pio[07]
+set_property -dict { PACKAGE_PIN B15   IOSTANDARD LVCMOS33 } [get_ports { rows[0] }]; #IO_L11N_T1_SRCC_16 Sch=pio[08]
 
 ## GPIO Pins
 ## Pins 15 and 16 should remain commented if using them as analog inputs

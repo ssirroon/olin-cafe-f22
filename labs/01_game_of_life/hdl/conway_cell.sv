@@ -14,6 +14,10 @@ module conway_cell(clk, rst, ena, state_0, state_d, state_q, neighbors);
 
     wire c0, c1, c2, c3, c4, c5, c6;
     wire [3:0] s0, s1, s2, s3, s4, s5;
+
+    logic state_1; //one possible alive state, neighbors = 2
+    logic state_2; //another possible alive state, neighbors = 3
+
     logic c_out;
     logic [3:0] sum;
     
@@ -25,9 +29,15 @@ module conway_cell(clk, rst, ena, state_0, state_d, state_q, neighbors);
     adder_n #(.N(4)) adder5(s4,{3'b0, neighbors[6]}, 1'b0, s5, c5);
     adder_n #(.N(4)) adder6(s5,{3'b0, neighbors[7]}, 1'b0, sum, c6);
 
+
+
     always_comb begin
         //c_out = c0|c1|c2|c3|c4|c5|c6; no c_out needed because sum will never be above 8
-        state_d = (state_q&(sum==4'd2|sum==4'd3)) | (~state_q&(sum==4'd3));
+        state_1 = &(~(sum ^ 4'b10));
+        state_2 = &(~(sum ^ 4'b11));
+        state_d = (state_q&(state_1|state_2)) | (~state_q&(state_2));
+        //state_d = (state_q&(sum==4'd2)|sum==4'd3)) | (~state_q&(sum==4'd3)); // XNOR = ~(A ^ B)
+        $display(sum);
     end
 
     always_ff @(posedge clk) begin
