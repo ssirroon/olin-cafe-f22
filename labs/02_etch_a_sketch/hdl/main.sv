@@ -114,7 +114,7 @@ pwm #(.N(PWM_WIDTH)) PWM_LED1 (
   .out(leds[1])
 );
 
-`define LAB_PART_1
+`define LAB_PART_2
 always_comb begin: led_pwm_muxes
 `ifdef LAB_PART_1
   // For part 1, use the output of the triangle generators.
@@ -182,5 +182,17 @@ block_ram #(.W(VRAM_W), .L(VRAM_L)) VRAM(
   .wr_ena(vram_wr_ena), .wr_addr(vram_wr_addr), .wr_data(vram_wr_data)
 );
 // Add your vram control FSM here:
+
+// request for data from i2c controller (touch screen), sends back position and whether or not touch happened
+// SPI controller controls display, device has RAM that holds states but you also want to hold states of everything on FPGA
+// VRAM on FPGA to hold states, uses row-major encoding (look in book)
+// FSM
+/*
+ clear memory on button press.
+ update memory based on touch values.
+ emit draw signals based on memory.
+*/
+
+always_ff @(posedge clk) begin : i2c_fsm
 
 endmodule
