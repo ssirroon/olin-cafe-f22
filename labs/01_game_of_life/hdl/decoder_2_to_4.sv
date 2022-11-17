@@ -7,7 +7,6 @@ module decoder_2_to_4(ena, in, out);
     output logic [3:0] out;
     wire [1:0] ena_wire;
 
-    decoder_1_to_2 in_to_ena(
 wire ena0, ena1;
 // wire [1:0] decoder_enables;
 
