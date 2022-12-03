@@ -10,13 +10,13 @@ typedef enum logic [6:0] {
   OP_AUIPC = 7'b0010111,
   OP_STYPE = 7'b0100011,
   OP_RTYPE = 7'b0110011,
-  OP_LUI   = 7'b0110111,
+  OP_LUI   = 7'b0110111,  // load upper immediate
   OP_BTYPE = 7'b1100011,
   OP_JALR  = 7'b1100111,
   OP_JAL   = 7'b1101111
 } op_type_t;
 
-typedef enum logic [2:0] {
+typedef enum logic [2:0] {  // L-Type
   FUNCT3_LOAD_LB  = 3'b000,
   FUNCT3_LOAD_LH  = 3'b001,
   FUNCT3_LOAD_LW  = 3'b010,
@@ -24,7 +24,7 @@ typedef enum logic [2:0] {
   FUNCT3_LOAD_LHU = 3'b101
 } funct3_load_t;
 
-typedef enum logic [2:0] {
+typedef enum logic [2:0] {  // R-Type
   FUNCT3_ADD = 3'b000,
   FUNCT3_SLL = 3'b001,
   FUNCT3_SLT = 3'b010,
@@ -35,7 +35,7 @@ typedef enum logic [2:0] {
   FUNCT3_AND = 3'b111
 } funct3_ritype_t;
 
-typedef enum logic [2:0] {
+typedef enum logic [2:0] {  // Branch
   FUNCT3_BEQ  = 3'b000,
   FUNCT3_BNE  = 3'b001,
   FUNCT3_BLT  = 3'b100,
